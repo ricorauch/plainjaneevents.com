@@ -1,3 +1,21 @@
+map {
+	width: 500px;
+    height: 400px;
+    background-color: #000;
+}
+
+@media (max-width:768px) {
+	.logo img{
+			width: 120px;
+			margin: 5px 0 0 5px;
+	    }}
+
+@media (min-width:768px) {
+	    .logo img{
+	        margin:-1em;
+			max-width: 95%
+	    }}
+
 body {
 	    overflow-x: hidden;
 	    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -46,7 +64,7 @@ body {
 	h5,
 	h6 {
 	    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	    text-transform: uppercase;
+	    /**text-transform: uppercase;**/
 	    font-weight: 700
 	}
 	
@@ -55,11 +73,12 @@ body {
 	}
 	
 	.bg-light-gray {
-	    background-color: #f7f7f7
+	    background-color: #f2f2f1
 	}
 	
 	.bg-darkest-gray {
-	    background-color: #222
+	    background-color: #222;
+	    color: #f2f2f1;
 	}
 	
 	.btn-primary {
@@ -113,13 +132,13 @@ body {
 	
 	.btn-xl {
 	   	color: #fff;
-	    border-color: rgba(22, 166, 182, 1);
-	    background-color: rgba(22, 166, 182, 1);
+	    border-color: rgba(153, 153, 153, 1);
+	    background-color: rgba(153, 153, 153, 0.7);
 	    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	    text-transform: uppercase;
 	    font-weight: 700;
 	    border-radius: 3px;
-	    font-size: 18px;
+	    font-size: 16px;
 	    padding: 20px 40px;
 	}
 	
@@ -127,15 +146,15 @@ body {
 	.btn-xl:focus,
 	.open .dropdown-toggle.btn-xl {
 	    color: #fff;
-	    border-color: rgba(22, 166, 182, 0.8);
-	    background-color: rgba(22, 166, 182, 0.8);
+	     border-color: rgba(153, 153, 153, 1);
+	    background-color: rgba(153, 153, 153, 1);
 	}
 
 	.btn-xl:active
 	{
 	    color: #fff;
-	    border-color: rgba(22, 166, 182, 1);
-	    background-color: rgba(22, 166, 182, 1);
+	     border-color: rgba(153, 153, 153, 1);
+	    background-color: rgba(153, 153, 153, 1);
 	    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	    text-transform: uppercase;
 	    font-weight: 700;
@@ -235,7 +254,7 @@ body {
 	@media (min-width:768px) {
 	    .navbar-default {
 	        /*background-color: transparent;*/
-	        padding: 25px 0;
+	        padding: 15px 0;
 	        -webkit-transition: padding .3s;
 	        -moz-transition: padding .3s;
 	        transition: padding .3s;
@@ -252,8 +271,8 @@ body {
 	    }
 	    .navbar-default.navbar-shrink {
 	        background-color: #fff;
-	        padding: 10px 0;
-	        /*box-shadow: 0 0 3px rgba(0,0,0,0.4);*/
+	        padding: 15px 0;
+	        /**box-shadow: 0 0 3px rgba(0,0,0,0.4);**/
 
 	    }
 	    .navbar-default.navbar-shrink .navbar-brand {
@@ -264,22 +283,31 @@ body {
 	header {
 	    background-color: #f7f7f7;
 	    text-align: center;
-	    color: #333
+	    color: #333;
+	    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+	    url(../img/20thcentury-4.jpg);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-color: #f7f7f7;
+	    background-attachment: scroll;
+	    text-align: left;
+	    color: #333;
 	}
 	
 	header .intro-text {
 	    padding-top: 100px;
 	    padding-bottom: 50px;
-	    text-align: left;
+	    text-align: center;
+	    color: #fff
 	}
 	
 	header .intro-text .intro-lead-in {
 	    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	    color: #808080;
+	    color: #fff;
 	    font-style: italic;
 	    font-size: 22px;
 	    line-height: 22px;
-	    margin-bottom: 50px
+	    margin-bottom: 25px
 	}
 	
 	header .intro-text .intro-heading {
@@ -288,16 +316,17 @@ body {
 	    font-weight: 700;
 	    font-size: 40px;
 	    line-height: 50px;
-	    margin-bottom: 25px
+	    margin-bottom: 30px
 	}
 	
 	@media (min-width:768px) {
 	    header {
-	    background-image: url(../img/culture.jpg);
+	    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+	    url(../img/20thcentury-4.jpg);
 	    background-repeat: no-repeat;
+	    background-size: cover;
 	    background-color: #f7f7f7;
 	    background-attachment: scroll;
-	    background-position: right bottom;
 	    text-align: left;
 	    color: #333;
 		}
@@ -306,30 +335,30 @@ body {
 			padding-top:60px;
 		}
 
+
 	    header .intro-text {
 	        padding-top: 300px;
-	        padding-bottom: 200px
+	        padding-bottom: 200px;
+	        color: #fff;
 	    }
 	    header .intro-text .intro-lead-in {
 	        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	        color: #808080;
+	        color: #fff;
 	        font-style: italic;
-	        font-size: 20px;
+	        font-size: 30px;
 	        line-height: 40px;
-	        margin-bottom: 50px
+	        margin-bottom: 25px
 	    }
 	    header .intro-text .intro-heading {
 	        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	        text-transform: uppercase;
 	        font-weight: 700;
-	        font-size: 60px;
-	        line-height: 75px;
-	        margin-bottom: 15px
+	        font-size: 40px;
+	        margin-bottom: 50px;
 	    }
 	}
 	
 	section {
-	    padding: 100px 0
+	    padding: 80px 0
 	}
 	
 	section h2.section-heading {
@@ -349,7 +378,7 @@ body {
 	
 	@media (min-width:768px) {
 	    section {
-	        padding: 150px 0
+	        padding: 120px 0
 	    }
 	}
 	
@@ -371,7 +400,7 @@ body {
 	}
 	
 	#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-	    background: rgba(22, 166, 182, .9);
+	    background: rgba(242, 242, 242, .5);
 	    position: absolute;
 	    width: 100%;
 	    height: 100%;
@@ -646,6 +675,8 @@ body {
 	    margin: 50px auto
 	}
 	
+	/** Contact background commented out
+
 	section#contact {
 	    background-color: #222;
 	    background-image: url(../img/map-image1.png);
@@ -657,10 +688,8 @@ body {
 	    background-size: cover;
 	    -o-background-size: cover;
 	}
+	**/
 	
-	section#contact .section-heading {
-	    color: #fff
-	}
 	
 	section#contact .form-group {
 	    margin-bottom: 25px
@@ -864,5 +893,4 @@ body {
 	
 	body {
 	    webkit-tap-highlight-color: #ccc;
-	    margin: 0 20px 0 20px
 	}
